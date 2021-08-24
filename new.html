@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+</title>
+<style type="text/css">
+#ex1 {  box-sizing: content-box;  
+  width: 300px;
+  height: 10px;
+  padding: 30px;  
+  border: dotted;
+  margin-right:100px;
+
+}
+div {
+  border: 1px solid black;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-right: 900px;
+  margin-left: 80px;
+  background-color: lightblue;
+}
+
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  border: 3px solid green; 
+}
+
+
+
+</style>
+</head>
+<body>
+
+<div>
+<form>
+  <h2 align="center"> PRODUCT DETAILS </h2>
+  <label><em>PRODUCT NAME</label> <br><br><input type="text" size="75" name="name" /> <br><br>
+  <label><em>UNIT OF MEASUREMENT</label><br><br><input type="text" size="75" name="quantity" /> <br><br>
+  <label><em>PRODUCT IMAGE</label><br><div id="ex1"><input type="file" size="50" align="center" name="images[]"  /> </div><br>
+  <label><em>PRODUCT DESCRIPTION</label><br><br><textarea rows="4" cols="68" name="description"></textarea> <br><br>
+ <pre> <input type="reset" margin-left="40px" />      <button type="button" >save </button> </pre>
+ </form>
+ </div>
+</body>
+</html>
+

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Creating Tables</title>
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=UdzI8QFz7JDbAm-Yfu-fnZI-zwKDvhtrNKV40JKVvdo603bKMcQ9TX2ETP8JLYPwTI6C1xqcJ5b01De65AAOW_1_UJpVCFlvvW56RDm0Zvac2HVravUhC8vaAkPo1HGPPnZqbVVBd64sw91gylCqjlMvIwEEuH_ban8-MjVFN6VvDL07ercBvP3eGjzDSYgCjXXIzeQLoZ_8VJrdc_3du7RxftoJZ63h5gxSb0bvcFgQhMj9-0z_sYccsRDT_kSIbBs4GFqkBrGoGzxzJTLZJungu5jEUvA7bvpcZjNjVzZ2UHLlD0hUDgDdbaDRsKBeMzPl7resqhU1FxRKIYbgcwKX64h0bA309PcGdUWizrC_FfwzCedVEMIfOmy2ZtgKc1g-F6cignOZLwIPK_hf5GPnQtB231VLmawDUv8wTlQlU8Y6uVF-2di418nz7Tk3Zr10xJeesC0bYdtELPMlgvjamIoiHCN7pCaLgKucmc9MvxlHDgN9iD5EoiOoBkoAStnMxsukvhJwjv7lzkWkfosb4D9ZELVBzxAb8yqqjY_WUJM8xp0iCkq4Tw3XwDXKFMDaFlCkMqNomve9WktQEfGmvlev7REJLRj4DyngoF40Cxa3n2nCNqYnebrLw1O1PMVKXJZ4M5_141ueAyTyPARbALTZBkwwki7sHxnMclNJhg4stYONdIf6zdD6uWedRNmSLl9ptK6777ykfZqnIuAg5gn_ou-TSVcn1A1drqa_aQMy-DWo-6D1hgqAMyo97nAFg2SuhmJV_-2sykm7Qe8Cg1lgweBRP_rxnZQJQ7K5Lce6k_CyXFqSjanqBXU1fNKi8kikwItuSLj5Wb_1fT41NH_bOyerkdvDznsatsk1_xO-QFgoLuXszYt2Jhbgq0LyqfXeJLNzyv2diV8i1jQS8B09POMVYYXSc1eWYN4NuTxa33At7VtYegggEgSfZB90voMaJhHhMYnzmbOo82VL-4reI4e8WHVKc4Q8N3is8gSYSD44KBUkbH5bRUFDtpytRmdGcnqhT4JbEZvq2ZRMiTpeqbLFt9UtrpNkKsEAz5vqflZPDDx6RwnqohB3W1vJ5w47IWPQH1fnbhspyTa2fa3DY_0mgGSbQpQdqVcSSqmoNWgkp3Fh_aBAL-mZIAUhnTsfrLgjdy1lZN88H34oq7Av98q6Ko3YcXlaqWCJ4RszpKWrF7ksFn0k9eSjmLcXtnMYMqlhD_bKoHFsWg" nonce="b23fc976f8481b83d9e831ccb1a48a2d" charset="UTF-8"></script><style>  
+    .table
+    {
+      border-collapse: collapse;
+      width: 100%;
+      padding: 5px;
+      margin: 25px 0;
+      font-size: 0.9em;
+      min-width: 400px;
+      border-radius: 5px 5px 0 0;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+      padding-bottom:15px;
+      column-count: 6;
+      column-gap: 50px
+    }
+    thead tr {
+      text-align: left;
+      font-weight: bold;
+    }
+    table, th, td {
+    padding: 5px;
+    font-size: 1.5em;
+    text-align: left;
+    border-bottom: 1px solid rgb(131, 190, 245);
+	background-color:lightblue;
+    }
+    table {
+    border-spacing: 30px;
+    }
+  
+​table tr {
+    border-bottom: 1px solid black;
+}​
+
+    .pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.pagination a.active {
+  background-color: #99d2f8;
+  color: white;
+}
+
+.pagination a:hover:not(.active) {
+    background-color: #ddd;
+}
+
+body{
+  font-size: 0.9em;
+  margin-left: 40px;
+  margin-top: 30px;
+}
+.button{ 
+   
+  border: none;
+  color: white;
+  padding: 14px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer; 
+  border-radius: 4px;
+}
+.center {
+  margin: 0;
+  position: absolute;
+  top: 4.05%;
+  left: 87%; }
+  
+  .button5 {border-radius: 50%;}
+
+
+
+.moveright {
+    text-align:right;
+}
+</style>
+
+
+</head>
+
+<body margin-left: 40px; margin-top: 30px;>
+    <h2>View Products second page<div class="center"> <button class="moveright" id="Addproduct">Add a Product</button></div> </h2>
+        
+   
+    <table class="table">
+        <thead>
+          <tr>
+            <th>Image</th>
+            <th>Product Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Unit of Measurement</th>
+            <th>
+                <div class="pagination">
+                <a href="Index.html">&laquo;</a>
+                <a class="active" href="Index.html">1</a>
+                <a href="second_page.html">2</a>
+                <a href="second_page.html">&raquo;</a>
+              </div>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="font-size:0px">
+                <img src="images\leathershoe.jfif" height="50px" width="50px" style="display:block;"> 
+            </td>
+            <td><em>Leather Shoe</td>
+            <td><em>Real leather uppers</td>
+            <td>5,000</td>
+            <td><em>Grams</td>
+            <td style="text-align:center;">
+             <div class="button">   <button class="clsActionButton moveright button5" id="idAddButton" onclick="idEditButton_onclick();">Edit</button> </div>
+
+              <div class="button">  <button class="clsActionButton moveright button5" id="idEditButton" onclick="idDeleteButton_onclick();">Delete</button> </div>
+
+            </td>
+          </tr>
+          <tr>
+            <td style="font-size:0px">
+                <img src="images\sports_shoe.jfif" height="50px" width="50px" style="display:block;"> 
+            </td>
+            <td><em>sports boots</td>
+            <td><em>running</td>
+            <td>15,000</td>
+            <td><em>Grams</td>
+            <td style="text-align:center;">
+             <div class="button">   <button class="clsActionButton moveright button5" id="idAddButton" onclick="idEditButton_onclick();">Edit</button> </div>
+
+             <div class="button">   <button class="clsActionButton moveright button5" id="idEditButton" onclick="idDeleteButton_onclick();">Delete</button> </div>
+
+            </td>
+          </tr>
+          <tr>
+            <td style="font-size:0px">
+                <img src="images\printer.jfif" height="50px" width="50px" style="display:block;"> 
+            </td>
+            <td><em>Printer</td>
+            <td><em>Ink-Tank</td>
+            <td>20,000</td>
+            <td><em>Grams</td>
+            <td style="text-align:center;">
+            <div class="button">    <button class="clsActionButton moveright button5" id="idAddButton" onclick="idEditButton_onclick();">Edit</button> </div>
+
+             <div class="button">   <button class="clsActionButton moveright button5" id="idEditButton" onclick="idDeleteButton_onclick();">Delete</button> </div>
+
+            </td>
+          </tr>
+          <tr>
+            <td style="font-size:0px">
+                <img src="images\laptop.png" height="50px" width="50px" style="display:block;"> 
+            </td>
+            <td><em>Laptop</td>
+            <td><em>Electronic item with GPU</td>
+            <td>50,000</td>
+            <td><em>Grams</td>
+            <td style="text-align:center;">
+              <div class="button">  <button class="clsActionButton moveright button5" id="idAddButton" onclick="idEditButton_onclick();">Edit</button> </div>
+
+              <div class="button">  <button class="clsActionButton moveright button5" id="idEditButton" onclick="idDeleteButton_onclick();">Delete</button> </div>
+
+            </td>
+          </tr>
+          <tr class="active-row">
+            <td style="font-size:0px">
+                <img src="images\keyboard.jfif" height="50px" width="50px" style="display:block;"> 
+            </td>
+            <td><em>Keyboard</td>
+            <td><em>Mechanical keyboard</td>
+            <td>2000</td>
+            <td><em>Grams</td>
+            <td style="text-align:center;">
+             <div class="button">   <button class="clsActionButton moveright button5" id="idAddButton" onclick="idEditButton_onclick();">Edit</button> </div>
+
+             <div class="button">   <button class="clsActionButton moveright button5" id="idEditButton" onclick="idDeleteButton_onclick();">Delete</button> </div>
+
+            </td>
+          </tr>
+          <tr>
+            <td style="font-size:0px">
+                <img src="images\monitor.jfif" height="50px" width="50px" style="display:block;"> 
+            </td>
+            <td><em>Monitor</td>
+            <td><em>AMOLED</td>
+            <td>15,000</td>
+            <td><em>Grams</td>
+            <td style="text-align:center;">
+            <div class="button">    <button class="clsActionButton moveright button5" id="idAddButton" onclick="idEditButton_onclick();">Edit</button> </div>
+
+             <div class="button">   <button class="clsActionButton moveright button5" id="idEditButton" onclick="idDeleteButton_onclick();">Delete</button> </div>
+
+            </td>
+          </tr>
+          <tr>
+            <td style="font-size:0px">
+                <img src="images\monitor.jfif" height="50px" width="50px" style="display:block;"> 
+            </td>
+            <td><em>TV</td>
+            <td><em>SONY</td>
+            <td>75,000</td>
+            <td><em>Grams</td>
+            <td style="text-align:center;">
+             <div class="button">   <button class="clsActionButton moveright button5" id="idAddButton" onclick="idEditButton_onclick();">Edit</button> </div>
+
+             <div class="button">   <button class="clsActionButton moveright button5" id="idEditButton" onclick="idDeleteButton_onclick();">Delete</button> </div>
+
+            </td>
+          </tr>
+          <tr>
+            <td style="font-size:0px">
+                <img src="images\leathershoe.jfif" height="50px" width="50px" style="display:block;"> 
+            </td>
+            <td><em>Leather Shoe</td>
+            <td><em>Real leather uppers</td>
+            <td>5,000</td>
+            <td><em>Grams</td>
+            <td style="text-align:center;">
+             <div class="button">   <button class="clsActionButton moveright button5" id="idAddButton" onclick="idEditButton_onclick();">Edit</button> </div>
+
+              <div class="button">  <button class="clsActionButton moveright button5" id="idEditButton" onclick="idDeleteButton_onclick();">Delete</button> </div>
+
+            </td>
+          </tr>
+          <tr>
+            <td style="font-size:0px">
+                <img src="images\sports_shoe.jfif" height="50px" width="50px" style="display:block;"> 
+            </td>
+            <td><em>sports boots</td>
+            <td><em>running</td>
+            <td>15,000</td>
+            <td><em>Grams</td>
+            <td style="text-align:center;">
+             <div class="button">   <button class="clsActionButton moveright button5" id="idAddButton" onclick="idEditButton_onclick();">Edit</button> </div>
+
+             <div class="button">   <button class="clsActionButton moveright button5" id="idEditButton" onclick="idDeleteButton_onclick();">Delete</button> </div>
+
+            </td>
+          </tr>
+          <tr>
+            <td style="font-size:0px">
+                <img src="images\printer.jfif" height="50px" width="50px" style="display:block;"> 
+            </td>
+            <td><em>Printer</td>
+            <td><em>Ink-Tank</td>
+            <td>20,000</td>
+            <td><em>Grams</td>
+            <td style="text-align:center;">
+            <div class="button">    <button class="clsActionButton moveright button5" id="idAddButton" onclick="idEditButton_onclick();">Edit</button> </div>
+
+             <div class="button">   <button class="clsActionButton moveright button5" id="idEditButton" onclick="idDeleteButton_onclick();">Delete</button> </div>
+
+            </td>
+          </tr>
+          <tr>
+            <td style="font-size:0px">
+                <img src="images\leathershoe.jfif" height="50px" width="50px" style="display:block;"> 
+            </td>
+            <td><em>Leather Shoe</td>
+            <td><em>Real leather uppers</td>
+            <td>5,000</td>
+            <td><em>Grams</td>
+            <td style="text-align:center;">
+             <div class="button">   <button class="clsActionButton moveright button5" id="idAddButton" onclick="idEditButton_onclick();">Edit</button> </div>
+
+              <div class="button">  <button class="clsActionButton moveright button5" id="idEditButton" onclick="idDeleteButton_onclick();">Delete</button> </div>
+
+            </td>
+          </tr>
+          <tr>
+            <td style="font-size:0px">
+                <img src="images\sports_shoe.jfif" height="50px" width="50px" style="display:block;"> 
+            </td>
+            <td><em>sports boots</td>
+            <td><em>running</td>
+            <td>15,000</td>
+            <td><em>Grams</td>
+            <td style="text-align:center;">
+             <div class="button">   <button class="clsActionButton moveright button5" id="idAddButton" onclick="idEditButton_onclick();">Edit</button> </div>
+
+             <div class="button">   <button class="clsActionButton moveright button5" id="idEditButton" onclick="idDeleteButton_onclick();">Delete</button> </div>
+
+            </td>
+          </tr>
+          
+        </tbody>
+      </table>
+  </body>
+</html>
